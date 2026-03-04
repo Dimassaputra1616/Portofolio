@@ -1,6 +1,6 @@
 import { SlideUp } from "./animations/SlideUp";
 import { FadeIn } from "./animations/FadeIn";
-import Image from "next/image";
+
 
 export function Hero() {
     return (
@@ -69,7 +69,7 @@ export function Hero() {
 
                                 {/* Main Photo Container */}
                                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-slate-100 border-4 border-white/60 backdrop-blur-sm transform rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center">
-                                    <Image src="/images/profile.png" alt="Dimas" fill className="object-cover" priority />
+                                    <span className="text-8xl font-black text-slate-200 tracking-tighter">DS</span>
                                 </div>
 
                                 {/* Floating Badge */}
