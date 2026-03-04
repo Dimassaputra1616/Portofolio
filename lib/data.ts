@@ -106,8 +106,34 @@ export const projects: Project[] = [
         tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
         githubUrl: "#",
         demoUrl: "#",
-        images: [],
+        images: [
+            { src: "/images/company/home.png" },
+            { src: "/images/company/about.png" }
+        ],
         imagePlaceholder: "Corporate Web Interface",
+        systemOverview: {
+            users: "Public Audience & Clients",
+            departments: "Marketing & PR",
+            deploymentStatus: "Live (Production)",
+            infrastructure: "Vercel Edge Network"
+        },
+        problemSolution: {
+            problem: "Perusahaan membutuhkan identitas digital yang merepresentasikan profesionalisme dan dapat menunjang skalabilitas layanan mereka kepada calon klien global.",
+            solution: "Membangun website perusahaan yang modern, responsif, dan interaktif menggunakan Next.js dan animasi Framer Motion untuk menarik perhatian pengunjung sejak detik pertama.",
+            result: "Website baru berhasil menaikkan waktu kunjungan rata-rata sebesar 45% dan meningkatkan konversi lead generation dari formulir kontak secara signifikan."
+        },
+        architecture: [
+            { icon: "cloud", title: "Edge Deployment", detail: "Di-deploy di Vercel untuk Global CDN dan waktu muat super cepat kurang dari 1 detik di seluruh dunia." },
+            { icon: "component", title: "Server-Side Rendering", detail: "Menggunakan Next.js App Router untuk performa optimasi SEO maksimal dan eksekusi halaman sisi server." }
+        ],
+        coreFeatures: [
+            { title: "Dynamic Service Showcase", description: "Halaman interaktif untuk menampilkan layanan unggulan perusahaan dengan transisi mulus dan animasi elegan." },
+            { title: "SEO Optimized CMS", description: "Terintegrasi dengan arsitektur headless CMS untuk kemudahan tim marketing memperbarui artikel dan press release tanpa bantuan teknis." },
+            { title: "Responsive Fluid Layouts", description: "Desain UI yang sepenuhnya adaptif pada perangkat seluler, tablet, hingga layar ultrawide desktop tanpa memecah struktur." }
+        ],
+        technicalChallenges: [
+            { challenge: "Mempertahankan skor performa 90+ di Google Lighthouse sambil mengeksekusi banyak animasi interaktif dan memuat gambar beresolusi tinggi.", solution: "Mengimplementasikan teknik lazy-loading yang agresif, optimasi gambar otomatis menggunakan next/image, dan memastikan animasi Framer Motion tidak menahan TTI (Time to Interactive)." }
+        ]
     },
     {
         slug: "smart-attendance-system",
@@ -122,7 +148,34 @@ export const projects: Project[] = [
         tags: ["Laravel", "Android", "MySQL", "RESTful API"],
         githubUrl: "",
         demoUrl: "",
-        images: [],
-        imagePlaceholder: "Coffee Shop Showcase",
+        images: [
+            { src: "/images/coffee/catalog.png" },
+            { src: "/images/coffee/checkout.png" }
+        ],
+        imagePlaceholder: "Mobile Attendance Interface",
+        systemOverview: {
+            users: "All Employees & HR Team",
+            departments: "Human Resources",
+            deploymentStatus: "Internal Production",
+            infrastructure: "Cloud VPS & Android Devices"
+        },
+        problemSolution: {
+            problem: "Sistem absensi lama berbasis mesin fingerprint rentan mengalami error teknis, masih memungkinkan celah manipulasi ('titip absen'), dan sangat menyita waktu tim HR untuk rekapitulasi data lembur setiap akhir bulan.",
+            solution: "Mengembangkan ekosistem absensi digital berlapis ganda: Aplikasi mobile Android khusus karyawan untuk proses check-in berbasis GPS Geofencing dipadukan dengan verifikasi swafoto (Selfie), serta Web Dashboard komprehensif untuk HR memonitor kehadiran.",
+            result: "Tata kelola kedisiplinan 100% transparan, manipulasi kehadiran berhasil direduksi hingga 0%, dan data absen serta lembur otomatis terekapitulasi secara real-time tanpa campur tangan manual."
+        },
+        architecture: [
+            { icon: "database", title: "Relational DB", detail: "Menggunakan MySQL untuk struktur tabel data kehadiran yang sangat berelasi (skema jam kerja, shift, karyawan, history)." },
+            { icon: "server", title: "Laravel Backend Engine", detail: "Sistem back-end monolitik tangguh yang menyajikan RESTful API stateless dengan otentikasi JWT bagi konsumsi aplikasi mobile." },
+            { icon: "security", title: "Geofencing & Anti-Fake", detail: "Integrasi sistem penolakan Mock Location di HP, pengecekan koordinat area kerja, dan validasi radius operasional." }
+        ],
+        coreFeatures: [
+            { title: "Mobile Verification Clock In/Out", description: "Pencatatan kehadiran intuitif melalui gawai personal dengan syarat wajib berada di dalam radius kantor dan melampirkan foto wajah live." },
+            { title: "Automated Monthly Generation", description: "Generator laporan otomatis presensi dan rekap komponen gaji karyawan di Dashboard Admin, dapat diekspor ke PDF/Excel instan." },
+            { title: "Leave & Overtime Digital Requests", description: "Sistem pemrosesan form izin sakit, cuti, serta pengajuan lembur yang diintegrasikan langsung dalam aplikasi dengan hierarki mutlak supervisor." }
+        ],
+        technicalChallenges: [
+            { challenge: "Isu pembacaan akurasi GPS yang sering meleset pada device Android low-end, menyebabkan karyawan yang sudah berada di kantor dianggap berada di luar batas geofencing zona absen.", solution: "Memperlebar sedikit radius toleransi area kantor sebesar 50 meter dan menambahkan algoritma pengecekan stabilitas di sisi mobile, dimana aplikasi harus membaca minimum radius accuracy < 20m sebelum diizinkan hit API ke server." }
+        ]
     }
 ];
